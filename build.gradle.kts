@@ -4,6 +4,7 @@ plugins {
     id("architectury-plugin") version "3.4-SNAPSHOT"
     id("dev.architectury.loom") version "1.4-SNAPSHOT" apply false
     java
+    kotlin("jvm") version "1.9.21"
     idea
 }
 
@@ -23,6 +24,7 @@ subprojects {
         maven("https://maven.fabricmc.net/")
         maven("https://maven.minecraftforge.net/")
         maven("https://maven.neoforged.net/releases/")
+        maven("https://thedarkcolour.github.io/KotlinForForge/")
     }
 
     @Suppress("UnstableApiUsage")
@@ -40,6 +42,7 @@ subprojects {
 
 allprojects {
     apply(plugin = "java")
+    apply(plugin = "org.jetbrains.kotlin.jvm")
     apply(plugin = "architectury-plugin")
     apply(plugin = "maven-publish")
     apply(plugin = "idea")

@@ -32,6 +32,7 @@ loom {
 
 dependencies {
     neoForge("net.neoforged:neoforge:${project.properties["neoforge_version"]}")
+    implementation("thedarkcolour:kotlinforforge-neoforge:${project.properties["kotlin_forge_version"]}")
 
     "common"(project(":common", "namedElements")) { isTransitive = false }
     "shadowCommon"(project(":common", "transformProductionNeoForge")) { isTransitive = false }
